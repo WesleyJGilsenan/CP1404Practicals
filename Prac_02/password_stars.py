@@ -1,3 +1,5 @@
+"""CP1404: Prac 2 Password Stars | Wesley Gilsenan"""
+
 def main():
     password = get_password()
     generate_password(password)
