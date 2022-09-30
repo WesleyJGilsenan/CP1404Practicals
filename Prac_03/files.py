@@ -21,5 +21,14 @@ number_1 = int(number_file.readline())
 number_2 = int(number_file.readline())
 sum_of_numbers = (number_1 + number_2)
 print(sum_of_numbers)
+number_file.close()
 
 
+# Program 4 - Opens numbers.txt for any number of numbers
+number_file = open('numbers.txt', 'r')
+sum_of_numbers = 0
+for line in number_file:
+    number = int(line)
+    sum_of_numbers = sum_of_numbers + number
+print(sum_of_numbers)
+number_file.close()
