@@ -7,3 +7,9 @@ print(user_name, file=user_file)
 user_file.close()
 
 
+# Program 2 - Open file and read name
+user_file = open("name.txt", 'r')
+for name in user_file:
+    print(f"Your name is {name}")
+user_file.close()
+
