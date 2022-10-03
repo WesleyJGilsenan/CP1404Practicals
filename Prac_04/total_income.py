@@ -1,8 +1,5 @@
 """CP1404: Prac 4 total income | Wesley Gilsenan"""
 
-from operator import itemgetter
-
-
 def main():
     """Display income report for incomes over a given number of months."""
     incomes = []
