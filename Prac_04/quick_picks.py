@@ -15,7 +15,8 @@ def main():
         for k in range(PICKS_PER_LINE):
             number = random.randint(MINIMUM, MAXIMUM)
             picks.append(number)
-        print(picks[0], picks[1], picks[2], picks[3], picks[4], picks[5])
+        picks.sort()
+        print(f"{picks[0]:2} {picks[1]:2} {picks[2]:2} {picks[3]:2} {picks[4]:2} {picks[5]:2}")
 
 
 main()
