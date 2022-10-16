@@ -3,12 +3,14 @@ CP1404: Prac 5 Wimbledon | Wesley Gilsenan
 """
 
 FILENAME = 'wimbledon.csv'
+COUNTRY = 1
+CHAMPION = 2
 
 
 def main():
-    print("memes")
     records = generate_information()
-    print(records)
+    champions, countries = arrange_champions(records)
+    display_champions(champions, countries)
 
 
 def generate_information():
@@ -21,10 +23,21 @@ def generate_information():
     return champion_information
 
 
-# def arrange_champions():
+def arrange_champions(records):
+    champions = {}
+    countries = set()
+    for record in records:
+        countries.add(record[COUNTRY])
+        try:
+            champions[record[CHAMPION]] += 1
+        except KeyError:
+            champions[record[CHAMPION]] = 1
+    return champions, countries
 
 
-# def display_champions():
+# def display_champions(champions, countries):
+
+
 
 
 main()
