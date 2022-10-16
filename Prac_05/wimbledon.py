@@ -35,9 +35,12 @@ def arrange_champions(records):
     return champions, countries
 
 
-# def display_champions(champions, countries):
-
-
+def display_champions(champions, countries):
+    print("Wimbledon Champions: ")
+    for name, count in champions.items():
+        print(name, count)
+    print(f"These {len(countries)} countries have won Wimbledon: ")
+    print(", ".join(country for country in sorted(countries)))
 
 
 main()
