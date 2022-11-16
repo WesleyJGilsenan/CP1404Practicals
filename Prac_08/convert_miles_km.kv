@@ -4,6 +4,7 @@ BoxLayout:
         orientation: 'horizontal'
         TextInput:
             id: user_distance_input
+            on_text: app.label_calculation(self.text)
         BoxLayout:
             orientation: 'vertical'
             size_hint_x: 0.25
@@ -14,6 +15,7 @@ BoxLayout:
     BoxLayout:
         orientation: 'vertical'
         Button:
-            text: 'Convert m to km'
+            text: 'Convert mi to km'
         Label:
-            text: 'am Label'
+            id: output_label
+            #text: app.handle_update
