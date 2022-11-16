@@ -10,12 +10,15 @@ BoxLayout:
             size_hint_x: 0.25
             Button:
                 text: 'Up'
+                on_press: app.handle_increment(user_distance_input.text, 1)
             Button:
                 text: 'Down'
+                on_press: app.handle_increment(user_distance_input.text, -1)
     BoxLayout:
         orientation: 'vertical'
-        Button:
-            text: 'Convert mi to km'
+        #Button:
+            #text: 'Convert mi to km'
         Label:
             id: output_label
-            #text: app.handle_update
+            text: app.km_output
+            color: (1, 1, 0, 1)

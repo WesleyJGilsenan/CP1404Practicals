@@ -21,10 +21,22 @@ class MilesToKmApp(App):
         return self.root
 
     def label_calculation(self, text):
-        miles = text
+        miles = self.convert_to_number(text)
+        self.handle_update(miles)
 
-    #def handle_update(self, miles):
-        #self.km_output = miles * MILES_TO_KM
+    def handle_increment(self, text, change):
+        miles = self.convert_to_number(text) + change
+        self.root.ids.user_distance_input.text = str(miles)
+
+    def handle_update(self, miles):
+        self.km_output = str(miles * MILES_TO_KM)
+
+    @staticmethod
+    def convert_to_number(text):
+        try:
+            return float(text)
+        except ValueError:
+            return 0.0
 
 
 MilesToKmApp().run()
