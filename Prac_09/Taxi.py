@@ -30,4 +30,4 @@ class Taxi(Car):
         """Drive like parent Car but calculate fare distance as well."""
         distance_driven = super().drive(distance)
         self.current_fare_distance += distance_driven
-        return distance_driven
+        return
