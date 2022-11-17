@@ -1,0 +1,24 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: user_distance_input
+            on_text: app.label_calculation(self.text)
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: 0.25
+            Button:
+                text: 'Up'
+                on_press: app.handle_increment(user_distance_input.text, 1)
+            Button:
+                text: 'Down'
+                on_press: app.handle_increment(user_distance_input.text, -1)
+    BoxLayout:
+        orientation: 'vertical'
+        #Button:
+            #text: 'Convert mi to km'
+        Label:
+            id: output_label
+            text: app.km_output
+            color: (1, 1, 0, 1)
