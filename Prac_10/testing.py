@@ -43,11 +43,9 @@ def run_tests():
     # You should test both of these
     test_car = Car(fuel=10)
     assert test_car.fuel == 10
-    print(test_car.fuel == 10)
 
     test_car = Car()
     assert test_car.fuel == 0
-    print(test_car.fuel == 0)
 
 
 run_tests()
@@ -57,7 +55,20 @@ doctest.testmod()
 
 # (don't change the tests, change the function!)
 
+
 # TODO: 5. Write and test a function to format a phrase as a sentence,
+def phrase_as_sentence(phrase):
+    """
+    >>> phrase_as_sentence('hello')
+    'Hello.'
+    """
+    sentence = phrase.capitalize()
+    if sentence[-1] != '.':
+        sentence += '.'
+    return sentence
+
+
+
 # starting with a capital and ending with a single full stop.
 # Important: start with a function header and just use pass as the body
 # then add doctests for 3 tests:
